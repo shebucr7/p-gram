@@ -1,0 +1,115 @@
+.sidebar{
+    background-color: $color-orange;
+    padding: 4rem 0 4rem 4rem;
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    &__logo{
+        width: 5rem;
+        height: auto;
+        margin-right: 4rem;
+    }
+    &__list{
+        list-style: none;
+        width: 100%;
+    }
+    &__item{
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: flex-end;
+        padding: 1rem;
+        border-radius: 5rem 0 0 5rem;
+        color: $color-grey-dark;
+        position: relative;
+        transition: all .3s;
+    }
+    &__item::before, &__item::after{
+        content: '';
+        display: block;
+        height: 20px;
+        position: absolute;
+        left: 0rem;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: bottom right;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' xml:space='preserve'%3E%3Cpath style='fill:%23f7f6ff;' d='M0,20h20V0C20,11,11,20,0,20z' /%3E%3C/svg%3E");
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s;
+    }
+    &__item::before{
+        top: -2rem;
+    }
+    &__item::after{
+        bottom: -2rem;
+        transform: rotateY(180deg) rotateZ(180deg);
+    }
+    &__item:hover::after,&__item:hover::before{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__item:hover{
+        background-color: $color-grey-dark;
+        color: $color-black;
+        border-radius: 5rem 0 0 5rem;
+    }
+
+    &__item:hover &__link{
+        color: $color-black;
+    }
+    &__item:hover &__icon{
+        fill: $color-black;
+    }
+    &__link:link, &__link:visited{
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        transition: color .3s;
+    }
+
+    &__icon{
+        height: 3rem;
+        width: 3rem;
+        fill: #fff;
+        margin-right: 1rem;
+        transition: fill .3s;
+    }
+    &__user{
+        display: flex;
+        align-items: center;
+        padding-right: 4rem;
+        //align-self: normal;
+    }
+   /* .wrapper{
+        justify-content: space-between;
+    }*/
+    &__user-link{
+        display: inline-block;
+        height: 5rem;
+        
+    }
+    &__user-photo{
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 1rem;
+    }
+    &__user-add{
+        height: 5rem;
+        width: 5rem;
+        background-color: $color-grey-dark;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__icon--add{
+        fill: $color-black;
+        margin-right: 0;
+    }
+}

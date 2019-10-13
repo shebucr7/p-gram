@@ -1,0 +1,36 @@
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__info{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__photo{
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    &__name{
+        font-weight: 600;
+    }
+    &__location{
+        font-weight: 400;
+        color: $color-grey;
+    }
+    &__stats{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__followers{
+        margin-right: 3rem;
+    }
+    &__posts{
+        margin-right: 3rem;
+    }
+    &__likes{
+
+    }
+}

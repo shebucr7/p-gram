@@ -1,0 +1,56 @@
+.container{
+    margin: 4rem auto;
+    background-color: $color-grey-dark;
+
+    //temp
+
+    //height: 120vh;
+    max-width: 120rem;
+    //
+
+    border-radius: 3rem;
+    overflow: hidden;
+
+    display: flex;
+
+    //weird
+
+}
+
+.main{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    flex:0 0 50%; 
+    align-items: flex-start;
+}
+.main__last{
+    display: flex;
+}
+.graphic{
+    width: 20rem;
+    height: auto;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    &__photo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.activities{
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-black-2;
+
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding-bottom: 3rem;
+}

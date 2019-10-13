@@ -1,0 +1,95 @@
+.report{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    &__group-boxes{
+        display: flex;
+    }
+    &__box{
+        flex: 0 0 40.82%;
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child){
+            margin-right: 1.5rem;
+        }
+        background-color: #fff;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+        border-radius: 1rem;
+        padding: 0.5rem 0.5rem 1rem 1.5rem;
+        cursor: default;
+        transform: translateY(0);
+        transition: transform .3s ease-in-out;
+    }
+    &__box:hover{
+        transform: translateY(-1.5rem);
+    }
+    &__top{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &__heading{
+        font-size: 1.4rem;
+        color: $color-grey;
+    }
+    &__heading-main{
+        font-size: 2.4rem;
+        &--1{
+            color: $color-orange-2;
+        }
+        &--2{
+            color: $color-cyan;
+        }
+        &--3{
+            color: $color-orange;
+        }
+
+    }
+    &__icon-box{
+        margin-left: auto;
+        height: 3rem;
+        width: 3rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &--1{
+            background-color: $color-orange-2;
+        }
+        &--2{
+            background-color: $color-cyan;
+        }
+        &--3{
+            background-color: $color-orange;
+        }
+    }
+    &__icon{
+        fill: #fff;
+        margin-right: 0;
+        height: 2rem;
+        width: 2rem;
+    }
+    &__bottom{
+        display: flex;
+        align-items: center;
+    }
+    &__progress-bar{
+        width: 75%;
+        height: 0.4rem;
+        border-radius: 0.2rem;
+        &--1{
+            background-image: linear-gradient(to right, $color-orange-2 77.99%, $color-grey-dark 78% );
+        }
+        &--2{
+            background-image: linear-gradient(to right, $color-cyan 48.99%, $color-grey-dark 49% );
+        }
+        &--3{
+            background-image: linear-gradient(to right, $color-orange 35.99%, $color-grey-dark 36% );
+        }
+    }
+    &__percentage{
+        margin-left: auto;
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+}

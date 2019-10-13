@@ -1,0 +1,26 @@
+.search{
+    padding: 4rem 4rem 0rem 4rem;
+    display: flex;
+    align-items: center;
+    &__input{
+        flex: 1;
+        padding: 1rem 3.5rem;
+        border-radius: 5rem;
+        border: none;
+        background-color: $color-grey-dark;
+        margin-right: -3rem;
+        &:focus{
+            outline: none;
+        }
+    }
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+        fill: $color-black;
+        transform: translateY(0);
+        transition: transform 0.2s;
+        &:active{
+            transform: translateY(0.15rem);
+        }
+    }
+}

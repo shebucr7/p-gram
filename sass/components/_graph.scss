@@ -1,0 +1,98 @@
+.graph{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    width: 36rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+    &__visuals{
+
+    }
+    &__data{
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    &__day{
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $color-grey;
+        margin-right: auto;
+    }
+    &__progress-bar{
+        height: 0.4rem;
+        width: 75%;
+        border-radius: 0.2rem;
+        margin-right: 2rem;
+        &--1{
+            background-image: linear-gradient(to right, $color-orange-2 34.99%, $color-orange 35%, $color-orange 74.9%,$color-cyan 75%);
+        }
+        &--2{
+            width: 65%;
+            margin-right: 5rem;
+            background-image: linear-gradient(to right, $color-orange-2 24.9%, $color-orange 25%, $color-orange 74.9%,$color-cyan 75%);
+        }
+        &--3{
+            width: 55%;
+            margin-right: 8rem;
+            background-image: linear-gradient(to right, $color-orange-2 12.99%, $color-orange 13%, $color-orange 34.9%,$color-cyan 35%);
+
+        }
+        &--4{
+            background-image: linear-gradient(to right, $color-orange-2 65.99%, $color-orange 66%, $color-orange 84.9%,$color-cyan 85%);
+
+        }
+        &--5{
+            width: 45%;
+            margin-right: 11rem;
+            background-image: linear-gradient(to right, $color-orange-2 02.99%, $color-orange 3%, $color-orange 74.9%,$color-cyan 75%);
+
+        }
+        &--6{
+            background-image: linear-gradient(to right, $color-orange-2 45.99%, $color-orange 46%, $color-orange 58.9%,$color-cyan 59%);
+
+        }
+        &--7{
+            background-image: linear-gradient(to right, $color-orange-2 69.99%, $color-orange 70%, $color-orange 88.9%,$color-cyan 89%);
+
+        }
+    }
+    &__markup{
+        display: flex;
+        margin-left: 5.5rem;
+    }
+    &__number{
+        margin-right: 3rem;
+        font-weight: 600;
+        color: $color-grey;
+    }
+    &__legends{
+        display: flex;
+        margin-left: 5.3rem;
+    }
+    &__legend{
+        display: flex;
+        align-items: center;
+    }
+    &__color-box{
+        margin-right: 1rem;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 0.35rem;
+        &--1{
+            background-color: $color-orange-2;
+        }
+        &--2{
+            background-color: $color-orange;
+        }
+        &--3{
+            background-color: $color-cyan;
+        }
+    }
+    &__legend-text{
+        margin-right: 3rem;
+        font-weight: 700;
+    }
+}
