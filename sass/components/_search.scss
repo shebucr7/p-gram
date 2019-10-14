@@ -2,6 +2,10 @@
     padding: 4rem 4rem 0rem 4rem;
     display: flex;
     align-items: center;
+    @include respond(tab-port){
+        padding: 2rem;
+        margin-bottom: 0;
+    }
     &__input{
         flex: 1;
         padding: 1rem 3.5rem;

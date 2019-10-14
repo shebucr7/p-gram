@@ -7,6 +7,18 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    @include respond(tab-land){
+        font-size: 55%;
+    }
+    @include respond(tab-land-2){
+        font-size: 45%;
+    }
+    @include respond(tab-port){
+        font-size: 55%;
+    }
+    @include respond(phone){
+        font-size: 45%;
+    }
 }
 
 body{

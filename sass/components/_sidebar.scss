@@ -6,6 +6,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    @include respond(tab-land-2){
+        flex: 0 0 20%;
+    }
+
+    @include respond(tab-port){
+        flex-direction: row;
+        padding: 2rem;
+        order: 1;
+    }
     &__logo{
         width: 5rem;
         height: auto;
@@ -14,6 +23,9 @@
     &__list{
         list-style: none;
         width: 100%;
+        @include respond(tab-port){
+            display: flex;
+        }
     }
     &__item{
         margin-bottom: 5rem;
@@ -24,6 +36,10 @@
         color: $color-grey-dark;
         position: relative;
         transition: all .3s;
+        @include respond(tab-port){
+            margin-bottom: 0;
+            border-radius: 0;
+        }
     }
     &__item::before, &__item::after{
         content: '';
@@ -39,6 +55,9 @@
         visibility: hidden;
         opacity: 0;
         transition: opacity .3s;
+        @include respond(tab-port){
+            background-image: none;
+        }
     }
     &__item::before{
         top: -2rem;
@@ -52,16 +71,20 @@
         opacity: 1;
     }
 
-    &__item:hover{
+    &__link:hover{
         background-color: $color-grey-dark;
         color: $color-black;
         border-radius: 5rem 0 0 5rem;
+        @include respond(tab-port){
+            border-radius: 2rem;
+        }
     }
 
-    &__item:hover &__link{
+    &__link:hover &__item{
         color: $color-black;
+        background-color: $color-grey-light;
     }
-    &__item:hover &__icon{
+    &__link:hover &__icon{
         fill: $color-black;
     }
     &__link:link, &__link:visited{
@@ -69,6 +92,11 @@
         font-size: 1.6rem;
         font-weight: 600;
         transition: color .3s;
+        @include respond(tab-port){
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+        }
     }
 
     &__icon{
@@ -83,6 +111,10 @@
         align-items: center;
         padding-right: 4rem;
         //align-self: normal;
+        @include respond(tab-port){
+            padding: 0;
+            margin-left: 4rem;
+        }
     }
    /* .wrapper{
         justify-content: space-between;

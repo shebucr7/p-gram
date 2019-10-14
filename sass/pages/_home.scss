@@ -14,7 +14,14 @@
     display: flex;
 
     //weird
-
+    @include respond(tab-land) {
+        margin: 0;
+        border-radius: 0;
+        max-width: 100%;
+    }
+    @include respond(tab-port){
+        flex-direction: column;
+    }
 }
 
 .main{
@@ -23,9 +30,24 @@
     flex-direction: column;
     flex:0 0 50%; 
     align-items: flex-start;
+    @include respond(tab-land){
+        flex: 0 0 30%;
+    }
+    @include respond(tab-land-2){
+        flex: 0 0 50%;
+    }
+    @include respond(tab-port){
+        order: 3;
+        align-self: center;
+
+    }
+    @include respond(phone){
+        align-self: center;
+    }
 }
 .main__last{
     display: flex;
+
 }
 .graphic{
     width: 20rem;
@@ -44,6 +66,16 @@
     display: flex;
     flex-direction: column;
     background-color: $color-black-2;
+    @include respond(tab-land){
+        flex: 1;
+    }
+    @include respond(tab-land-2){
+        flex: 1;
+    }
+    @include respond(tab-port){
+        order: 2;
+        flex-direction: row;
+    }
 
 }
 
@@ -53,4 +85,11 @@
     align-items: center;
     background-color: #fff;
     padding-bottom: 3rem;
+    @include respond(tab-port){
+        flex: 1;
+        padding-bottom: 0;
+        flex-direction: column-reverse;
+        background-image: linear-gradient(to right bottom, rgba(255, 143, 143, 0.466), rgba(160, 79, 79, 0.795)), url(../img/background-user.jpg);
+        background-size: cover;
+    }
 }
